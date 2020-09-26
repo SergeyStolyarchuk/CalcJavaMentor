@@ -3,11 +3,12 @@ import java.util.Set;
 
 public class calcThis {
     public static boolean flag = false;
-    public calcThis(String stringToCalc) throws calcExeption {
-        new initElementSet();
+
+    public void calc(String stringToCalc) throws calcExeption {
+
         stringToCalc = stringToCalc.trim();
         String[] arrToCalc = stringToCalc.split(" ");
-        if (arrToCalc.length < 2) {throw new calcExeption("Введите числа и знаки через пробел"); }
+        if (arrToCalc.length < 2) {throw new calcExeption("Введите числа и знаки через пробел, например вот так: 5 + 5 или V + VIII"); }
 
         int firstItem = 0, threeItem = 0;
 
